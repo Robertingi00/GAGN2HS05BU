@@ -1,6 +1,7 @@
 # Hópverkefni 1
 
 #### Client
+
     A Country Bus Company owns a number of busses. Each bus is allocated to a
     particular route, although some routes may have several busses. Each route passes
     through a number of towns. One or more drivers are allocated to each stage of a
@@ -32,6 +33,7 @@
 ___
 5. Draw an ERD Mapping that depicts all the entities, their attributes and link the foreign keys to their appropriate primary keys.
 6. Define the data types of all attributes.
+
     ![alt text](https://github.com/Robertingi00/GAGN2HS05BU/blob/master/H%C3%B3pverkefni_1/img/ERD_Mapping.PNG "ERD_Mapping")
     ___
 7. Create Database Called <Your kennitala_bus_db> and the create database tables using phpMyAdmin or Workbench.
