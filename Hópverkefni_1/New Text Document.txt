@@ -1,0 +1,7 @@
+Write down the relationships between entities with their cardinalities.
+
+Route -(1-M)- stage -(1-M)- Driver
+
+Route -(1-M)- Busses 
+
+Route -(1-M)- Town -(1 - (0-1))- Garage
