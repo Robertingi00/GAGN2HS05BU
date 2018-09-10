@@ -1,4 +1,4 @@
-# Hópverkefni 1
+# Hópverkefni 1 (Helgi Tuan & Róbert Ingi)
 
 #### Client
 
