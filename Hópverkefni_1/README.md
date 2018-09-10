@@ -32,4 +32,67 @@
 ___
 5. Draw an ERD Mapping that depicts all the entities, their attributes and link the foreign keys to their appropriate primary keys.
 6. Define the data types of all attributes.
+    ![alt text](https://github.com/Robertingi00/GAGN2HS05BU/blob/master/H%C3%B3pverkefni_1/img/ERD_Mapping.PNG "ERD_Mapping")
 7. Create Database Called <Your kennitala_bus_db> and the create database tables using phpMyAdmin or Workbench.
+    
+    ```SQL
+    create database 0907002780_CountryBusCompany;
+
+
+    create table Route(
+        Route_num int not null primary key,
+        Route_pass_per_day int(10)
+    );
+
+    create table Stage(
+        Stage_ID int not null auto_increment primary key,
+        Route_num int not null,
+        FOREIGN KEY (Route_num) REFERENCES Route(Route_num)
+    );
+
+    create table Address(
+        Address_ID int not null auto_increment primary key,
+        Country varchar(50) not null,
+        City varchar(50) not null,
+        Street varchar(50),
+        House_number varchar(20),
+        Zip int(20) not null
+    );
+
+    create table Driver(
+        Emp_num int not null primary key,
+        Emp_name varchar(50) not null,
+        Emp_phone int(20) not null,
+        Address_ID int not null,
+        Stage_ID int not null,
+        FOREIGN KEY (Address_ID) REFERENCES Address(Address_ID),
+        FOREIGN KEY (Stage_ID) REFERENCES Stage(Stage_ID)
+    );
+
+    create table Busses(
+        Bus_reg_num varchar(20) not null primary key,
+        Bus_size int(30) not null,
+        Bus_max_pass int(30) not null,
+        Route_num int not null,
+        Foreign key(Route_num) references Route(Route_num)
+    );
+
+    create table Town(
+        Town_ID int not null auto_increment primary key,
+        Route_num int not null,
+        Foreign key(Route_num) references Route(Route_num)
+    );
+
+    create table Garage(
+        Gar_ID int not null auto_increment primary key,
+        Address_ID int not null,
+        Town_ID int not null,
+        Foreign key(Address_ID) references Address(Address_ID),
+        foreign key(Town_ID) references Town(Town_ID)
+    );
+
+
+    select * from garage;
+    select * from town;
+    select * from busses;
+    ```
