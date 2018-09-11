@@ -17,6 +17,7 @@
 
 
 1. Read the test carefully, list all possible entities.
+2. Write down the relationships between entities with their cardinalities.
     
     ```
     Route -(1-M)- stage -(1-M)- Driver
@@ -25,7 +26,7 @@
     ````
     
     ___
-2. Write down the relationships between entities with their cardinalities.
+
 
 3. Draw an ER (Entity Relationship) diagram with all possible entities, their relationships, and cardinalities?
 4. List all possible attributes of the entities and define primary and foreign keys.
