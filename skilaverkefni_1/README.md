@@ -7,7 +7,7 @@ Line(LIN_NUMBER, LINE_UNITS, LINE_PRICE)
 Product(PROD_CODE, PROD_DESCRIPT, PROD_PRICE, PROD_ON_HAND)
 Verdor(VEND_CODE, VEND_CONTACT, VEND_AREACODE, VEND_PHONE)
 
-###1-	Define the data type and size for each attribute: 
+### 1-	Define the data type and size for each attribute: 
         
    #### Customer
    |   Attribute  | Data type | Size |
@@ -54,9 +54,9 @@ Verdor(VEND_CODE, VEND_CONTACT, VEND_AREACODE, VEND_PHONE)
    | Vend_Areacode| INT       | 10   |
    | Vend_Phone   | Varchar   | 15   |
    
-###2- Creating database and tables:
-###3- primary and foreign keys constraints:
-###4- Adding the default values:
+### 2- Creating database and tables:
+### 3- primary and foreign keys constraints:
+### 4- Adding the default values:
 
    I put the foregin and primary keys on wen i made the database and the default values, So this is the answer to question 2 and 3 and 4.
     
@@ -106,7 +106,7 @@ Verdor(VEND_CODE, VEND_CONTACT, VEND_AREACODE, VEND_PHONE)
    );
    
    ```
-###5- Inserting data in to tables
+### 5- Inserting data in to tables
 
    ```sql
    INSERT INTO Customer (CUS_CODE, CUS_LNAME, CUS_FNAME, CUS_INITIAL, CUS_AREACODE, CUS_PHONE, CUS_BALANCE)
@@ -136,7 +136,7 @@ Verdor(VEND_CODE, VEND_CONTACT, VEND_AREACODE, VEND_PHONE)
     
    ```
     
-###6- find a solution to the Problem.
+### 6- find a solution to the Problem.
 
    ```sql
    CREATE TABLE Employee(
