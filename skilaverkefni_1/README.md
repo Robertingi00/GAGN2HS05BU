@@ -137,7 +137,11 @@ Verdor(VEND_CODE, VEND_CONTACT, VEND_AREACODE, VEND_PHONE)
    ```
     
 ### 6- find a solution to the Problem.
-
+        The saleCo company wants to keep records of sales employees, so they can identify each employee, his customers and products that he/she sells. Employees are identified by the following attributes.
+        (EMP_NUM(INT), EMP_TITLE (CHAR (10)), EMP_LNAME(VARCHAR(15)), EMP_FNAME(VARCHAR(15)), EMP_INITIAL(CHAR(1)), EMP_DOB(DATETIME), EMP_HIR_DATE(DATETIME), EMP_AREACODE(CHAR(5)), EMP_PHONE(CHAR(8)), EMP_MGR(INT))
+        Create the table employee and modify the related tables and their constraints based on the business rules?
+        
+   #### Solution:
    ```sql
    CREATE TABLE Employee(
    	EMP_num int not null auto_increment primary key,
