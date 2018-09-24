@@ -109,53 +109,6 @@ Verdor(VEND_CODE, VEND_CONTACT, VEND_AREACODE, VEND_PHONE)
 5- Inserting data in to tables
 
    ```sql
-   CREATE TABLE Customer(
-   	CUS_CODE int(10) not null primary key,
-   	CUS_LNAME varchar(30) not null,
-   	CUS_FNAME varchar(30) not null,
-   	CUS_INITIAL varchar(3) not null,
-    	CUS_AREACODE int(10) not null default 0181,
-    	CUS_PHONE varchar(15) not null,
-    	CUS_BALANCE float(8) default 0.00  
-   );
-
-   CREATE table Invoice(
-       LIN_NUMBER int(10) not null primary key,
-       Cus_Cod int(10) not null,
-       INV_Date date not null,
-       constraint petur foreign key(Cus_Cod) references Customer(CUS_CODE) on delete cascade
-   );
-
-
-   CREATE table Vendor(
-       VEND_CODE int(10) not null primary key,
-       VEND_CONTACT Varchar(30),
-       VEND_AREACODE int(10),
-       VEND_PHONE varchar(15)
-   );
-
-
-   CREATE table Product(
-       PROD_CODE varchar(20) not null primary key,
-       PROD_DESCRIPT varchar(50) not null,
-       PROD_PRICE int(8) not null,
-       PROD_ON_HAND int(10) not null,
-       VEND_CODE int(10) not null,
-       constraint fk_product_vencode foreign key(VEND_CODE) references Vendor(VEND_CODE) on delete cascade
-   );
-
-
-   CREATE TABLE Line(
-       Line_Number int(10) not null primary key,
-       LINE_UNITS int(5) not null default 0.00,
-       LINE_PRICE int(10) not null default 0.00,
-       INV_NUMBER int(10) not null,
-       PROD_CODE varchar(20) not null,
-       constraint fk_Line_Invoice foreign key(INV_NUMBER) references Invoice(LIN_NUMBER) on delete cascade,
-       constraint fk_Line_Product foreign key(PROD_CODE) references Product(PROD_CODE) on delete cascade
-   );
-
-
    INSERT INTO Customer (CUS_CODE, CUS_LNAME, CUS_FNAME, CUS_INITIAL, CUS_AREACODE, CUS_PHONE, CUS_BALANCE)
    VALUES (10010,'Ramas','Alfred','A','0181','844-2573',0),
    (10011,'Dunne','Leona','K','0161','894-1238',0),
