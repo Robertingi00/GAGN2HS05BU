@@ -159,9 +159,9 @@ Rollback;
 
 ```
 ___
-#### 8. Write the SQL code to create a copy of EMP_1, naming the copy EMP_2. Then write the SQL code that will add the attributes EMP_PCT and PROJ_NUM to its structure. The EMP_PCT is the bonus percentage to be paid to each employee. The new attribute characteristics
- are: EMP_PCTNUMBER(4,2) and PROJ_NUMCHAR(3)
- (Note: If your SQL implementation allows it, you may use DECIMAL(4,2) rather than NUMBER(4,2).)
+#### 8. Write the SQL code to create a copy of EMP_1, naming the copy EMP_2. Then write the SQL code that will add the attributes EMP_PCT and PROJ_NUM to its structure. The EMP_PCT is the bonus percentage to be paid to each employee. The new attribute characteristics:
+#### are: EMP_PCTNUMBER(4,2) and PROJ_NUMCHAR(3)
+#### (Note: If your SQL implementation allows it, you may use DECIMAL(4,2) rather than NUMBER(4,2).)
  
 ```sql
 
@@ -170,6 +170,7 @@ alter table EMPLOYEE add PROJ_NUM_FK char(4);
 alter table EMPLOYEE add FOREIGN KEY(PROJ_NUM_FK) references PROJECT(PROJ_NUM);
 
 ```
+___
 #### 9. Write the SQL code to change the EMP_PCT value to 3.85 for the person whose employee number (EMP_NUM) is 103. Next, write the SQL command sequences to change the EMP_PCT values as shown in Figure Q1.3.
 
 ```sql
