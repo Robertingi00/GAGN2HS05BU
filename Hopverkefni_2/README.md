@@ -301,8 +301,6 @@ select PROJ_NUM_FK, sum(ASSIGN_CHG_HR), sum(ASSIGN_HOURS), sum(ASSIGN_CHG_HR*ASS
 ___
 #### 24. Write the SQL code to generate the total hours worked and the total charges made by all employees. The results are shown in Figure Q1.8. (Hint: This is a nested query. If you use Microsoft Access, you can generate the result by using the query output shown in Figure Q1.6 as the basis for the query that will produce the output shown in Figure Q1.8.)
 ```sql
-select PROJ_NUM_FK, sum(ASSIGN_CHG_HR), sum(ASSIGN_HOURS), sum(ASSIGN_CHG_HR*ASSIGN_HOURS) AS sum_of_CHG from ASSIGNMENT group by PROJ_NUM_FK;
-```sql
 
 select SUM(A.ASSIGN_HOURS), SUM(A.ASSIGN_CHG_HR*A.ASSIGN_HOURS) from EMPLOYEE as E
 INNER JOIN ASSIGNMENT AS A ON A.EMP_NUM_FK = E.EMP_NUM;
@@ -310,11 +308,10 @@ INNER JOIN ASSIGNMENT AS A ON A.EMP_NUM_FK = E.EMP_NUM;
 ```
 ___
 #### 25. Write the SQL code to generate the total hours worked and the total charges made to all projects. The results should be the same as those shown in Figure Q1.8. (Hint: This is a nested query. If you use Microsoft Access, you can generate the result by using the query output shown in Figure Q1.7 as the basis for this query.)
-```sql
-select PROJ_NUM_FK, sum(ASSIGN_CHG_HR), sum(ASSIGN_HOURS), sum(ASSIGN_CHG_HR*ASSIGN_HOURS) AS sum_of_CHG from ASSIGNMENT group by PROJ_NUM_FK;
+
 ```sql
 
-select SUM(A.ASSIGN_HOURS), SUM(A.ASSIGN_CHG_HR*A.ASSIGN_HOURS) from Project as P
-INNER JOIN ASSIGNMENT AS A ON A.PROJ_NUM_FK = P.PROJ_NUM;
+select PROJ_NUM_FK, sum(ASSIGN_CHG_HR), sum(ASSIGN_HOURS), sum(ASSIGN_CHG_HR*ASSIGN_HOURS) AS sum_of_CHG from ASSIGNMENT group by PROJ_NUM_FK;
 
 ```
+
